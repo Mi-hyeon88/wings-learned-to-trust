@@ -60,21 +60,24 @@ img{
 <img src="page5.png" alt="Page 5">
 <img src="page6.png" alt="Page 6">
 </div>
-
+<button id="nextButton">Next Chapter →</button>
 
 
 <script>
 const button = document.getElementById("beginButton");
 const intro = document.getElementById("intro");
 const story = document.getElementById("story");
-
+const nextButton = document.getElementById("nextButton");
 button.onclick = function() {
-    
     intro.style.display = "none";
     story.style.display = "block";
 
-    
-    
+    story.scrollIntoView({
+        behavior: "smooth"
+    });
+};
+    nextButton.onclick = function() {
+    window.location.href = "chapter2.html";
 };
 </script>
 </body>
