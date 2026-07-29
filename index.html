@@ -39,10 +39,17 @@ h1{
 
     background-image:url("cover.png");
     background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
+    background-position:center top;
+background-repeat:no-repeat;
+background-size:115%;
 }
-
+#intro::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.55);
+    z-index:0;
+}
 #story{
     display:none;
 }
@@ -97,14 +104,16 @@ button:hover{
     }
 
 #overlay{
+    position:relative;
+z-index:1;
     position:absolute;
     inset:0;
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    padding-bottom:280px;
-    background:rgba(5,6,10,.65);
+    padding-bottom:180px;
+    background:rgba(0,0,0,.82);
     );
 }
 
