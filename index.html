@@ -36,7 +36,11 @@ h1{
     height:100vh;
     overflow:hidden;
     transition:opacity 1s ease;
-    background-size:110%;
+
+    background-image:url("cover.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
 }
 
 #story{
@@ -92,18 +96,6 @@ button:hover{
         transform:translateY(0px);
     }
 
-#cover{
-    position:absolute;
-    inset:0;
-    z-index:-1;
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    opacity:.15;
-filter:grayscale(100%) brightness(25%) blur(2px);
-    animation:slowZoom 20s ease-in-out infinite alternate;
-}
-
 #overlay{
     position:absolute;
     inset:0;
@@ -138,8 +130,6 @@ filter:grayscale(100%) brightness(25%) blur(2px);
 
 <body>
 <div id="intro">
-
-    <img id="cover" src="cover.png" alt="As Wings Learned to Trust">
 
     <div id="overlay">
 
