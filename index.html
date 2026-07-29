@@ -48,7 +48,7 @@ img{
 
 <p>A symbolic story about fear, sincerity and respect.</p>
 
-<button>Begin</button>
+<button id="beginButton">Begin</button>
 
 </div>
 
@@ -61,5 +61,14 @@ img{
 <img src="page6.png" alt="Page 6">
 </div>
 </body>
+<script>
+const button = document.getElementById("beginButton");
+const intro = document.getElementById("intro");
+const story = document.getElementById("story");
 
+button.onclick = function() {
+    intro.style.display = "none";
+    story.style.display = "block";
+};
+</script>
 </html>
