@@ -18,11 +18,21 @@ body{
 }
 
 h1{
-    letter-spacing:2px;
-    text-shadow:0 0 25px rgba(255,255,255,.15);
-    margin-top:40px;
-    font-size:48px;
+    margin:0;
+
+    font-size:42px;
+
     font-weight:600;
+
+    letter-spacing:3px;
+
+    line-height:1.2;
+
+    color:#ffffff;
+
+    text-shadow:
+        0 0 12px rgba(255,255,255,.15),
+        0 0 30px rgba(255,255,255,.08);
 }
      p{
      color:#cfcfcf;
@@ -38,16 +48,15 @@ h1{
     transition:opacity 1s ease;
 
     background-image:url("cover.png");
-    background-size:cover;
+    background-size:118%;
     background-position:center top;
-background-repeat:no-repeat;
-background-size:115%;
+    background-repeat:no-repeat;
 }
 #intro::before{
     content:"";
     position:absolute;
     inset:0;
-    background:rgba(0,0,0,.55);
+    background:rgba(0,0,0,.72);
     z-index:0;
 }
 #story{
@@ -67,23 +76,39 @@ transition:opacity .8s ease, transform .8s ease;
 }
 
 button{
-    background:rgba(15,15,20,.75);
-    color:#f3f0ea;
-    border:1px solid rgba(212,188,122,.45);
-    padding:14px 42px;
+button{
+    background:rgba(18,18,25,.70);
+    color:#f6f2e8;
+
+    border:1px solid rgba(212,188,122,.35);
+
+    padding:15px 44px;
+
     font-size:18px;
-    border-radius:999px;
-    cursor:pointer;
+
     font-family:'Cormorant Garamond', serif;
-    letter-spacing:2px;
-    transition:all .3s ease;
-    backdrop-filter:blur(6px);
+
+    letter-spacing:3px;
+
+    border-radius:999px;
+
+    cursor:pointer;
+
+    backdrop-filter:blur(8px);
+
+    box-shadow:0 0 25px rgba(212,188,122,.15);
+
+    transition:.3s ease;
 }
 
 button:hover{
-    background:rgba(30,30,40,.9);
-    border-color:rgba(212,188,122,.8);
-    transform:scale(1.03);
+    background:rgba(30,30,40,.90);
+
+    border-color:rgba(212,188,122,.70);
+
+    box-shadow:0 0 35px rgba(212,188,122,.25);
+
+    transform:scale(1.04);
 }
     img.show{
     opacity:1;
@@ -104,17 +129,20 @@ button:hover{
     }
 
 #overlay{
-    position:relative;
-z-index:1;
     position:absolute;
     inset:0;
+    z-index:1;
+
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    padding-bottom:180px;
-    background:rgba(0,0,0,.82);
-    );
+
+    text-align:center;
+
+    padding:0 30px;
+
+    background:rgba(0,0,0,.88);
 }
 
 #overlay h1{
@@ -187,21 +215,6 @@ button.onclick = function() {
     nextButton.onclick = function() {
     window.location.href = "chapter2.html";
 };
-    const images = document.querySelectorAll("img");
-
-    entries.forEach(function(entry){
-
-        if(entry.isIntersecting){
-            entry.target.classList.add("show");
-        }
-
-    });
-
-});
-
-images.forEach(function(img){
-    observer.observe(img);
-});
 </script>
 </body>
 </html>
