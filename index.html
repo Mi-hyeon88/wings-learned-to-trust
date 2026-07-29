@@ -92,6 +92,55 @@ button:hover{
     100%{
         transform:translateY(0px);
     }
+    #intro{
+    position:relative;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+}
+
+#cover{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+#overlay{
+    position:absolute;
+    inset:0;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    align-items:center;
+    padding-bottom:90px;
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,.75),
+        rgba(0,0,0,.25),
+        rgba(0,0,0,0)
+    );
+}
+
+#overlay h1{
+    color:white;
+    font-size:42px;
+    letter-spacing:3px;
+    margin-bottom:25px;
+    text-shadow:0 5px 20px rgba(0,0,0,.9);
+}
+
+#cover{
+    animation:slowZoom 20s ease-in-out infinite alternate;
+}
+
+@keyframes slowZoom{
+    from{
+        transform:scale(1);
+    }
+    to{
+        transform:scale(1.08);
     }
 </style>
 
@@ -100,17 +149,20 @@ button:hover{
 <body>
 <div id="intro">
 
-<h1>🪽</h1>
+    <img id="cover" src="cover.png" alt="As Wings Learned to Trust">
 
-<h1>As Wings Learned to Trust</h1>
+    <div id="overlay">
 
-<p>A symbolic story about fear, sincerity and respect.</p>
+        <h1>As Wings Learned to Trust</h1>
 
-<button id="beginButton">Begin</button>
+        <button id="beginButton">Begin</button>
+
+       </div>
 
 </div>
 
 <div id="story">
+
 <img src="page1.png" alt="Page 1">
 <img src="page2.png" alt="Page 2">
 <img src="page3.png" alt="Page 3">
