@@ -58,22 +58,23 @@ transition:opacity .8s ease, transform .8s ease;
 }
 
 button{
-    background:#ffffff;
-    color:#0d0d12;
-    border:none;
-    padding:16px 40px;
+    background:rgba(15,15,20,.75);
+    color:#f3f0ea;
+    border:1px solid rgba(212,188,122,.45);
+    padding:14px 42px;
     font-size:18px;
     border-radius:999px;
     cursor:pointer;
-    margin:40px auto;
-    display:block;
-    font-weight:bold;
+    font-family:'Cormorant Garamond', serif;
+    letter-spacing:2px;
     transition:all .3s ease;
+    backdrop-filter:blur(6px);
 }
 
 button:hover{
-    transform:scale(1.05);
-    background:#f0f0f0;
+    background:rgba(30,30,40,.9);
+    border-color:rgba(212,188,122,.8);
+    transform:scale(1.03);
 }
     img.show{
     opacity:1;
@@ -105,6 +106,9 @@ button:hover{
     width:100%;
     height:100%;
     object-fit:cover;
+    opacity:.15;
+filter:grayscale(100%) brightness(25%) blur(2px);
+    animation:slowZoom 20s ease-in-out infinite alternate;
 }
 
 #overlay{
@@ -116,24 +120,21 @@ button:hover{
     align-items:center;
     padding-bottom:90px;
     background:linear-gradient(
-        to top,
-        rgba(0,0,0,.75),
-        rgba(0,0,0,.25),
-        rgba(0,0,0,0)
+    to top,
+    rgba(5,6,10,.85),
+    rgba(5,6,10,.70),
+    rgba(5,6,10,.90)
     );
 }
 
 #overlay h1{
     color:white;
-    font-size:42px;
-    letter-spacing:3px;
-    margin-bottom:25px;
+    font-size:50px;
+    letter-spacing:5px;
+    margin-bottom:20px;
     text-shadow:0 5px 20px rgba(0,0,0,.9);
 }
 
-#cover{
-    animation:slowZoom 20s ease-in-out infinite alternate;
-}
 
 @keyframes slowZoom{
     from{
