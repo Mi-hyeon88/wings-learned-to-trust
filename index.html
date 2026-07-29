@@ -60,7 +60,9 @@ img{
 <img src="page5.png" alt="Page 5">
 <img src="page6.png" alt="Page 6">
 </div>
-</body>
+
+
+
 <script>
 const button = document.getElementById("beginButton");
 const intro = document.getElementById("intro");
@@ -68,7 +70,9 @@ const story = document.getElementById("story");
 
 button.onclick = function() {
     alert("O botão funcionou!");
+    intro.style.display = "none";
     story.style.display = "block";
 };
 </script>
+</body>
 </html>
