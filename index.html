@@ -10,7 +10,6 @@
 <style>
 body{
     margin:0;
-    overflow:hidden;
     background:linear-gradient(to bottom,#05060a,#0d0d12,#171923);
     background-attachment:fixed;
     font-family:'Cormorant Garamond', serif;
@@ -60,7 +59,10 @@ h1{
     padding:0 16px;
     box-sizing:border-box;
     }
-
+.page img{
+    width:100%;
+    height:auto;
+}
 #intro::after{
     content:"";
     position:absolute;
@@ -167,19 +169,9 @@ h1{
     to{
         transform:scale(1.09);
     }
+}
 #story{
     display:none;
-}
-
-#story img{
-    width:100%;
-    margin:30px auto;
-    display:block;
-    border-radius:12px;
-    box-shadow:0 0 20px rgba(0,0,0,.5);
-opacity:1;
-transform:translateY(0px);
-transition:opacity .8s ease, transform .8s ease;
 }
 
 #overlay{
@@ -225,13 +217,14 @@ transition:opacity .8s ease, transform .8s ease;
         0 4px 20px rgba(0,0,0,.95),
         0 0 40px rgba(0,0,0,.9);
 }
-
+@keyframes slowZoom{
     from{
         transform:scale(1.02);
     }
     to{
         transform:scale(1.08);
     }
+}
 </style>
 
 </head>
