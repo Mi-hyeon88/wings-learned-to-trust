@@ -32,6 +32,7 @@
     }
 body{
     margin:0;
+    overflow:hidden;
     background:linear-gradient(to bottom,#05060a,#0d0d12,#171923);
     background-attachment:fixed;
     font-family:'Cormorant Garamond', serif;
@@ -342,6 +343,7 @@ const music = document.getElementById("bgMusic");
 button.onclick = function() {
 music.volume = 0.3;
 music.play();
+    document.body.style.overflow = "auto";
     intro.style.opacity = "0";
 
     setTimeout(function() {
