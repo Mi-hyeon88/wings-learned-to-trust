@@ -7,7 +7,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
 <title>As Wings Learned to Trust</title>
     
-}
 <style>
 body{
     margin:0;
@@ -103,7 +102,7 @@ h1{
     justify-content:center;
     align-items:center;
 
-    gap:34px;
+    gap:32px;
 
     text-align:center;
 
@@ -115,7 +114,7 @@ h1{
 
     color:#fff;
 
-    font-size:42px;
+    font-size:40px;
 
     line-height:1.12;
 
@@ -168,7 +167,7 @@ h1{
         transform:scale(1.09);
     }
 #story{
-    display:block;
+    display:none;
 }
 
 #story img{
@@ -181,17 +180,6 @@ opacity:1;
 transform:translateY(0px);
 transition:opacity .8s ease, transform .8s ease;
 }
-    0%{
-        transform:translateY(0px);
-    }
-
-    50%{
-        transform:translateY(-8px);
-    }
-
-    100%{
-        transform:translateY(0px);
-    }
 
 #overlay{
     position:absolute;
@@ -237,8 +225,6 @@ transition:opacity .8s ease, transform .8s ease;
         0 0 40px rgba(0,0,0,.9);
 }
 
-
-@keyframes slowZoom{
     from{
         transform:scale(1.02);
     }
@@ -291,7 +277,6 @@ transition:opacity .8s ease, transform .8s ease;
 const button = document.getElementById("beginButton");
 const intro = document.getElementById("intro");
 const story = document.getElementById("story");
-const nextButton = document.getElementById("nextButton");
 button.onclick = function() {
 
     intro.style.opacity = "0";
@@ -300,7 +285,6 @@ button.onclick = function() {
 
         intro.style.display = "none";
         story.style.display = "block";
-        nextButton.style.display = "inline-block";
 
         story.scrollIntoView({
             behavior: "smooth"
@@ -308,9 +292,6 @@ button.onclick = function() {
 
     }, 1000);
 
-};
-    nextButton.onclick = function() {
-    window.location.href = "chapter2.html";
 };
 </script>
 </body>
